@@ -30,3 +30,8 @@ This started as a way for me to track different experiments but is open to any e
 
 Open an issue! If it is sensible, someone can create a PR to solve it.
 
+# Awesome extra resources
+
+- [KidsCanCode](http://kidscancode.org/godot_recipes/)
+- [Godot Docs - Tutorials](https://docs.godotengine.org/en/stable/community/tutorials.html)
+- [Awesome Godot](https://github.com/godotengine/awesome-godot)
