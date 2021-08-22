@@ -3,6 +3,20 @@
 An amalgamation of different experiments and useful practices.
 Each folder contains an example.
 
+# Version
+
+Godot 3.3
+
+# Using the samples
+
+- Download or clone this repository
+- With Godot, open the `project/project.godot` file
+- Choose a scene from one of the folders and run it :)
+
+# Project structure
+
+At the top level, we have auxiliary files (this README, any assets that can be imported, bash scripts...).
+The actual Godot project lives inside the `project` folder. This facilitates organization and VCS.
 
 # Contributing
 
