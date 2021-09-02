@@ -8,14 +8,30 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Label",
+"class": "TypeCastLabel",
+"language": "GDScript",
+"path": "res://TypeCast/Label.gd"
+} ]
+_global_script_class_icons={
+"TypeCastLabel": ""
+}
+
 [application]
 
-config/name="Experiments"
+config/name="Cookbook"
 config/icon="res://icon.png"
 
 [autoload]
 
-Constants="*res://AutoloadedConstants/constants.gd"
+Constants="*res://recipes/AutoloadedConstants/constants.gd"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/dpi/allow_hidpi=true
 
 [physics]
 
@@ -23,7 +39,8 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.588235, 0.560784, 0.647059, 1 )
+quality/filters/use_fxaa=true
 environment/default_environment="res://default_env.tres"
