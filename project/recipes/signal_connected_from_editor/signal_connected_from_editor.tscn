@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://SignalUpdateUI/Label.gd" type="Script" id=1]
-[ext_resource path="res://SignalUpdateUI/SignalUpdateUI.gd" type="Script" id=2]
+[ext_resource path="res://recipes/signal_connected_from_editor/signal_connected_from_editor.gd" type="Script" id=1]
+[ext_resource path="res://recipes/signal_connected_from_editor/label.gd" type="Script" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -28,14 +28,14 @@ margin_top = 24.0
 margin_right = 204.0
 margin_bottom = 38.0
 text = "I shouldn't change"
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 margin_top = 42.0
 margin_right = 204.0
 margin_bottom = 56.0
 text = "I should!"
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 key = 1
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
@@ -43,6 +43,6 @@ margin_top = 60.0
 margin_right = 204.0
 margin_bottom = 74.0
 text = "I shouldn't change"
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]

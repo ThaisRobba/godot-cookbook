@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://ProxyGetChildProperties/ProxyGetChildProperties.gd" type="Script" id=1]
-[ext_resource path="res://ProxyGetChildProperties/Parent.gd" type="Script" id=2]
-[ext_resource path="res://ProxyGetChildProperties/Child.gd" type="Script" id=3]
-[ext_resource path="res://ProxyGetChildProperties/Parent2.gd" type="Script" id=4]
+[ext_resource path="res://recipes/proxy_get_child_properties/proxy_get_child_properties.gd" type="Script" id=1]
+[ext_resource path="res://recipes/proxy_get_child_properties/child.gd" type="Script" id=2]
+[ext_resource path="res://recipes/proxy_get_child_properties/parent.gd" type="Script" id=3]
+[ext_resource path="res://recipes/proxy_get_child_properties/parent2.gd" type="Script" id=4]
+[ext_resource path="res://recipes/proxy_get_child_properties/Parent3.gd" type="Script" id=5]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -29,21 +30,21 @@ text = "Access child property 'inner_property' on parent"
 margin_top = 24.0
 margin_right = 318.0
 margin_bottom = 38.0
-text = "With _get:"
+text = "With extending child:"
 
 [node name="Parent" type="Label" parent="VBoxContainer"]
 margin_top = 42.0
 margin_right = 318.0
 margin_bottom = 56.0
 text = "Parent"
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="Child" type="Label" parent="VBoxContainer/Parent"]
 margin_right = 181.0
 margin_bottom = 14.0
 text = "Child"
 align = 2
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -60,7 +61,7 @@ __meta__ = {
 margin_top = 68.0
 margin_right = 318.0
 margin_bottom = 82.0
-text = "With setget:"
+text = "With _get::"
 
 [node name="Parent2" type="Label" parent="VBoxContainer"]
 margin_top = 86.0
@@ -74,7 +75,38 @@ margin_right = 181.0
 margin_bottom = 14.0
 text = "Child"
 align = 2
-script = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+margin_top = 104.0
+margin_right = 318.0
+margin_bottom = 108.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+margin_top = 112.0
+margin_right = 318.0
+margin_bottom = 126.0
+text = "With setget:"
+
+[node name="Parent3" type="Label" parent="VBoxContainer"]
+margin_top = 130.0
+margin_right = 318.0
+margin_bottom = 144.0
+text = "Parent"
+script = ExtResource( 5 )
+
+[node name="Child" type="Label" parent="VBoxContainer/Parent3"]
+margin_right = 181.0
+margin_bottom = 14.0
+text = "Child"
+align = 2
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
