@@ -1,10 +1,8 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
 [sub_resource type="DynamicFontData" id=1]
-hinting = 0
-font_path = "res://assets/fonts/Rubik-Light.ttf"
+font_path = "res://assets/fonts/caveat/caveatbrush-regular.ttf"
 
 [resource]
-use_mipmaps = true
-use_filter = true
+size = 32
 font_data = SubResource( 1 )

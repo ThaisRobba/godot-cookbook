@@ -55,3 +55,23 @@ func read_file(file: String) -> String:
 	var contents = f.get_as_text()
 	f.close()
 	return contents
+
+
+func get_file_name(filepath: String) -> String:
+	var start = filepath.find_last("/") + 1
+	var end = filepath.find_last(".") - start
+	return filepath.substr(start, end)
+
+
+func get_formatted_file_name(filepath: String) -> String:
+	return get_file_name(filepath).replace("_", " ").capitalize()
+
+
+func get_description(filepath: String) -> String:
+	var file = filepath.replace("tscn", "gd")
+	var f = File.new()
+	f.open(file, File.READ)
+	f.get_line() # We discard the first line which contains only three double quotes
+	var result = f.get_line()
+	f.close()
+	return result
